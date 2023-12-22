@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lupita Nyong'o - Contributions</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Biography</a>
+    <a href="awards.html">Awards</a>
+    <a href="contributions.html">Contributions</a>
+  </div>
+
+  <div class="banner">
+    <h1>Lupita Nyong'o</h1>
+    <img src="img/lupita_model.jpeg" alt="Lupita Nyong'o's photograph">
+    <img src="img/lupita.jpeg"alt="Lupita Nyong'o's contributions"> 
+    <img src="img/awards2.jpeg" alt="Lupita Nyong'o's images"> 
+    <img src="img/contributions.jpeg" alt="Lupita Nyong'o's images"> 
+    <img src="img/contributions2.jpeg" alt="Lupita Nyong'o's images"> 
+    <img src="img/contributions3.jpeg" alt="Lupita Nyong'o's images">  
+  </div>
+
+  <div class="content">
+    <h2>Contributions</h2>
+    <ul id="contributions-list">
+      <!-- Contributions will be dynamically added here using JavaScript -->
+    </ul>
+
+    <h2>Form</h2>
+    <form id="contribution-form" onsubmit="addContribution(event)">
+      <label for="contribution-input">Add a contribution:</label>
+      <input type="text" id="contribution-input" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2023 Lupita Nyong'o. All rights reserved.
+  </footer>
+
+  <script>
+    function addContribution(event) {
+      event.preventDefault();
+      var contributionInput = document.getElementById('contribution-input');
+      var contributionText = contributionInput.value;
+      var contributionsList = document.getElementById('contributions-list');
+      var listItem = document.createElement('li');
+      listItem.textContent = contributionText;
+      contributionsList.appendChild(listItem);
+      contributionInput.value = '';
+    }
+  </script>
+</body>
+</html>
